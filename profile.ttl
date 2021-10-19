@@ -1,7 +1,7 @@
 # baseURI: https://data.surroundaustralia.com/def/provworkflow
 # imports: https://w3c.github.io/dx-prof/prof/rdf/prof.ttl
 
-@prefix : <https://data.surroundaustralia.com/def/provworkflow> .
+@prefix : <https://data.surroundaustralia.com/def/provworkflow/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -11,7 +11,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.surroundaustralia.com/def/provwf>
+<https://data.surroundaustralia.com/def/provworkflow>
   a owl:Ontology ;
   a prof:Profile ;
   owl:imports <https://w3c.github.io/dx-prof/prof/rdf/prof.ttl> ;
@@ -21,14 +21,14 @@ The intended use of this Specification is for application code in programming la
 
 The additions to PROV-O made by this Specification's data model (its ontology) are designed to ensure the creation of well connected and well described PROV-O elements and also PROV-O element paterns that work well in data interoggation tooling, such as the SURROUND Ontology Platform."""@en ;
   skos:prefLabel "ProvWorkflow Profile" ;
-  prof:hasPart <https://data.surroundaustralia.com/def/provworkflow/eg1> ;
-  prof:hasPart <https://data.surroundaustralia.com/def/provworkflow/ontology> ;
-  prof:hasPart <https://data.surroundaustralia.com/def/provworkflow/shapes> ;
-  prof:hasPart <https://data.surroundaustralia.com/def/provworkflow/manifest> ;
-  prof:hasPart <https://data.surroundaustralia.com/def/provworkflow/ont.html> ;
+  prof:hasResource :examples ;
+  prof:hasResource :ontology ;
+  prof:hasResource :ontology.ttl ;
+  prof:hasResource :validator ;
+  prof:hasResource :manifest ;
   prof:isProfileOf <https://www.w3.org/TR/prov-o/> ;
 .
-<https://data.surroundaustralia.com/def/provworkflow/examples>
+:examples
   a prof:ResourceDescriptor ;
   dcterms:format "text/turtle" ;
   skos:prefLabel "Examples" ;
@@ -36,15 +36,15 @@ The additions to PROV-O made by this Specification's data model (its ontology) a
   prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/examples"^^xsd:anyURI ;
   prof:hasRole role:example ;
 .
-<https://data.surroundaustralia.com/def/provworkflow/ontology>
+:manifest
   a prof:ResourceDescriptor ;
-  dcterms:conformsTo <http://www.w3.org/TR/owl2-rdf-based-semantics/> ;
+  dcterms:conformsTo <https://data.surroundaustralia.org/ontology/standards-baseline> ;
   dcterms:format "text/turtle" ;
-  skos:prefLabel "Ontology in RDF" ;
-  prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/ontology.ttl"^^xsd:anyURI ;
-  prof:hasRole role:scheme ;
+  skos:prefLabel "SOP Manifest" ;
+  prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/manifest.ttl"^^xsd:anyURI ;
+  prof:hasRole role:manifest ;
 .
-<https://data.surroundaustralia.com/def/provworkflow/ontology>
+:ontology
   a prof:ResourceDescriptor ;
   dcterms:conformsTo <http://www.w3.org/TR/owl2-rdf-based-semantics/> ;
   dcterms:format "text/html" ;
@@ -52,19 +52,19 @@ The additions to PROV-O made by this Specification's data model (its ontology) a
   prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/ontology.html"^^xsd:anyURI ;
   prof:hasRole role:specification ;
 .
-<https://data.surroundaustralia.com/def/provworkflow/validator>
+:ontology.ttl
   a prof:ResourceDescriptor ;
   dcterms:conformsTo <http://www.w3.org/TR/owl2-rdf-based-semantics/> ;
   dcterms:format "text/turtle" ;
-  skos:prefLabel "SHACL Shapes" ;
+  skos:prefLabel "Ontology in RDF" ;
+  prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/ontology.ttl"^^xsd:anyURI ;
+  prof:hasRole role:scheme ;
+.
+:validator
+  a prof:ResourceDescriptor ;
+  dcterms:conformsTo <http://www.w3.org/TR/owl2-rdf-based-semantics/> ;
+  dcterms:format "text/turtle" ;
+  skos:prefLabel "Validator" ;
   prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/validator"^^xsd:anyURI ;
   prof:hasRole role:validation ;
-.
-<https://data.surroundaustralia.com/def/provworkflow/manifest>
-  a prof:ResourceDescriptor ;
-  dcterms:conformsTo <https://data.surroundaustralia.org/ontology/standards-baseline> ;
-  dcterms:format "text/turtle" ;
-  skos:prefLabel "SOP Manifest" ;
-  prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/manifest.ttl"^^xsd:anyURI ;
-  prof:hasRole role:manifest ;
 .
