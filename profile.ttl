@@ -33,7 +33,7 @@ The additions to PROV-O made by this Specification's data model (its ontology) a
   dcterms:format "text/turtle" ;
   skos:prefLabel "Examples" ;
   dcterms:description "Example images and RDF files of ProvWF data"@en ;
-  prof:hasArtifact <https://github.com/surroundaustralia/provwf-profile/tree/master/examples> ;
+  prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/examples"^^xsd:anyURI ;
   prof:hasRole role:example ;
 .
 <https://data.surroundaustralia.com/def/provworkflow/ontology>
@@ -41,7 +41,7 @@ The additions to PROV-O made by this Specification's data model (its ontology) a
   dcterms:conformsTo <http://www.w3.org/TR/owl2-rdf-based-semantics/> ;
   dcterms:format "text/turtle" ;
   skos:prefLabel "Ontology in RDF" ;
-  prof:hasArtifact <https://data.surroundaustralia.com/def/provworkflow/ontology.ttl> ;
+  prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/ontology.ttl"^^xsd:anyURI ;
   prof:hasRole role:scheme ;
 .
 <https://data.surroundaustralia.com/def/provworkflow/ontology>
@@ -49,7 +49,7 @@ The additions to PROV-O made by this Specification's data model (its ontology) a
   dcterms:conformsTo <http://www.w3.org/TR/owl2-rdf-based-semantics/> ;
   dcterms:format "text/html" ;
   skos:prefLabel "Ontology in HTML" ;
-  prof:hasArtifact <https://data.surroundaustralia.com/def/provworkflow/ontology.html> ;
+  prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/ontology.html"^^xsd:anyURI ;
   prof:hasRole role:specification ;
 .
 <https://data.surroundaustralia.com/def/provworkflow/validator>
@@ -57,7 +57,7 @@ The additions to PROV-O made by this Specification's data model (its ontology) a
   dcterms:conformsTo <http://www.w3.org/TR/owl2-rdf-based-semantics/> ;
   dcterms:format "text/turtle" ;
   skos:prefLabel "SHACL Shapes" ;
-  prof:hasArtifact <https://data.surroundaustralia.com/def/provworkflow/validator> ;
+  prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/validator"^^xsd:anyURI ;
   prof:hasRole role:validation ;
 .
 <https://data.surroundaustralia.com/def/provworkflow/manifest>
@@ -65,6 +65,6 @@ The additions to PROV-O made by this Specification's data model (its ontology) a
   dcterms:conformsTo <https://data.surroundaustralia.org/ontology/standards-baseline> ;
   dcterms:format "text/turtle" ;
   skos:prefLabel "SOP Manifest" ;
-  prof:hasArtifact <https://data.surroundaustralia.com/def/provworkflow/manifest.ttl> ;
+  prof:hasArtifact "https://data.surroundaustralia.com/def/provworkflow/manifest.ttl"^^xsd:anyURI ;
   prof:hasRole role:manifest ;
 .
