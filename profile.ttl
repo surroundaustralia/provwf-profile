@@ -33,7 +33,7 @@ The additions to PROV-O made by this Specification's data model (its ontology) a
   dcterms:format "text/turtle" ;
   skos:prefLabel "Examples" ;
   dcterms:description "Example images and RDF files of ProvWF data"@en ;
-  prof:hasArtifact <https://github.com/surroundaustralia/provwf-ont/examples/> ;
+  prof:hasArtifact <https://github.com/surroundaustralia/provwf-profile/tree/master/examples> ;
   prof:hasRole role:example ;
 .
 <https://data.surroundaustralia.com/def/provworkflow/ontology>
@@ -52,12 +52,12 @@ The additions to PROV-O made by this Specification's data model (its ontology) a
   prof:hasArtifact <https://data.surroundaustralia.com/def/provworkflow/ontology.html> ;
   prof:hasRole role:specification ;
 .
-<https://data.surroundaustralia.com/def/provworkflow/shapes>
+<https://data.surroundaustralia.com/def/provworkflow/validator>
   a prof:ResourceDescriptor ;
   dcterms:conformsTo <http://www.w3.org/TR/owl2-rdf-based-semantics/> ;
   dcterms:format "text/turtle" ;
   skos:prefLabel "SHACL Shapes" ;
-  prof:hasArtifact <https://data.surroundaustralia.com/def/provworkflow/validator.ttl> ;
+  prof:hasArtifact <https://data.surroundaustralia.com/def/provworkflow/validator> ;
   prof:hasRole role:validation ;
 .
 <https://data.surroundaustralia.com/def/provworkflow/manifest>
